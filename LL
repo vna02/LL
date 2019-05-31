@@ -1,0 +1,84 @@
+
+#include <iostream>
+using namespace std;
+
+class Node{
+  public:
+  int value;
+  Node * next;
+  //Constructor
+  node(int newval)
+  {val = newval;
+  next = NULL;}  
+};
+
+class LinkedList{
+      public:
+      Node * head;
+        
+      LinkedList(){
+        head = NULL;
+      }
+     
+      void insert(int newval){
+         Node * temp = new Node(new val);
+         temp->next = head;
+         head = temp;
+      } 
+      void insertAt(int pos,int data){
+          Node * current = head;
+          int i = 1; 
+          if(i<pos-1){
+              i++;
+              current = current-> next;
+          }
+          else {
+            cout<<"Linked list does not have that many elements"<<endl;
+          }
+          Node * temp = new Node; 
+          temp -> value = data;
+      }
+      void delete(){
+        Node * temp = tail;
+        Node * current = head;
+        while(current->next != tail){
+          current = current->next;
+        }
+        int number of Items(){
+        // start at head
+        node * current =  head;
+        int count = 0;
+        while (current != NULL){
+            count++;
+            current = current->next;
+        }
+        return count;
+    }
+        current->next = NULL;
+        
+        tail=current;
+        //delete temp 
+        delete temp;
+          
+      }
+      
+      void display(){
+        Node * current = head;
+        while(current != NULL){
+          cout<<current->value<<"->";
+          current = current->next;
+        }cout<<endl;
+      }
+};
+
+//main function
+int main(){
+  LinkedList l1;
+  l1.insert(i);
+  l1.insertat(10,0);
+  l1.insertat(10,12);
+  l1.display();
+  l1.delete();
+  l1.display();
+     return 0;
+}
